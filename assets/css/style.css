@@ -1,0 +1,56 @@
+body{
+	background-image: url("../images/bright_squares_@2X.PNG");
+}
+.suggested-topics-header{
+	text-align:center;
+}
+.dropdown-menu{
+	width:300%;
+}
+.btn-search{
+	margin:5px;
+}
+.giphy-gif{
+	width:200px;
+	height:200px;
+	margin:10px;
+}
+.giphy-gif:hover{
+	cursor:pointer;
+}
+#btn-previous{
+	float:left;
+}
+#btn-next{
+	float:right;
+}
+#nav-btn-container{
+	display:none;
+}
+#navbar-container{
+	display:none;
+}
+#initial-search-container{
+	text-align:center;
+	margin-top:15%;
+}
+#initial-search-bar{
+	width:400px;
+}
+#initial-submit-btn{
+	margin:20px;
+}
+#main-site-link{
+	text-align:center;
+	margin-top:15px;
+}
+#main-site-link:hover{
+	cursor:pointer;
+}
+#initial-search-title{
+	font-weight:bold;
+	color:black;
+}
+#submit-btn{
+	margin-left:10px;
+}
