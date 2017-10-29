@@ -28,7 +28,7 @@ body{
 	display:none;
 }
 #navbar-container{
-	display:none;
+	/*display:none;*/
 }
 #initial-search-container{
 	text-align:center;
