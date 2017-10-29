@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var suggestedTopics = ["game phsyics", "memes", "cats", "star wars", "dogs"];
 	var searchItemCount = 1;
 	var currentSearch;
 	var queryURL;
@@ -12,7 +13,6 @@ $(document).ready(function(){
 
 	function generateGifs(currentSearch, queryURL){
 		$("#gif-container").empty();
-		// $("#gif-container-container").css("background-color", "#C8C8C8");
 		$.ajax({
 			url:queryURL,
 			method:"GET"
@@ -24,6 +24,12 @@ $(document).ready(function(){
 			});
 			
 		});
+	}
+
+	function generateSuggestedTopics(){
+		suggestedTopics.forEach(function(element){
+			$("#suggested-topics").append(`<button class='btn btn-sm btn-primary btn-search'>${element}</button>`);
+		})
 	}
 
 	$("#submit-btn").on("click", function(){
@@ -73,12 +79,17 @@ $(document).ready(function(){
 		queryURL = "https://api.giphy.com/v1/gifs/search?api_key=kUdEiNzB18suyRffNfQNMUjQoH96jnoM&q=" + currentSearch + "&limit=10&offset=" + offset + "&rating=PG&lang=en";
 		$("#initial-search-container").css("display", "none");
 		$("#navbar-container").css("display", "unset");
+		$("#main-site-link").text("The Best Gifs");
 		generateGifs(currentSearch, queryURL);
+
 	})
 
 	$("#main-site-link").on("click", function(){
 		$("#initial-search-container").css("display", "none");
 		$("#navbar-container").css("display", "unset");
+		$("#main-site-link").text("The Best Gifs");
 	})
+
+	generateSuggestedTopics();
 
 });

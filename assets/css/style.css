@@ -5,7 +5,7 @@ body{
 	text-align:center;
 }
 .dropdown-menu{
-	width:300%;
+	width:100%;
 }
 .btn-search{
 	margin:5px;
@@ -53,4 +53,8 @@ body{
 }
 #submit-btn{
 	margin-left:10px;
+}
+.dropdown-toggle{
+	font-weight:bold;
+	font-size:20px;
 }
